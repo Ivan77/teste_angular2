@@ -1,0 +1,29 @@
+<h1>
+
+  <!--<input type="text" value="{{title}}">-->
+
+  <input type="text"
+         [value]="title"
+         (keyup)="onKeyup(i.value)"
+         #i>
+
+  <div *ngIf="title === 'ivan'">
+    Aehoooo! -> ngIf sugar
+  </div>
+
+  <div *unless="title === 'ivan'">
+    Aehooo -> unless
+  </div>
+
+  <div *ngFor="let name of names">
+    {{name}}
+  </div>
+
+  <div [ngSwitch]="title">
+    <span *ngSwitchCase="'atilla'">atilla professor</span>
+    <span *ngSwitchCase="'ivan'">Ivan Top</span>
+    <span *ngSwitchCase="'curso'">curso angular 2</span>
+    <span *ngSwitchDefault></span>
+  </div>
+
+</h1>
